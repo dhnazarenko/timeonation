@@ -17,7 +17,7 @@ export const username = (): JSX.Element => (
     icon={<UserIcon />}
     placeholder="Benutzername"
     value=""
-    required={true}
+    required
     onChange={console.log}
   />
 );
@@ -27,7 +27,7 @@ export const password = (): JSX.Element => (
     icon={<PasswordIcon />}
     placeholder="Passwort"
     value=""
-    required={true}
+    required
     onChange={console.log}
   />
 );
@@ -37,7 +37,7 @@ export const email = (): JSX.Element => (
     icon={<EmailIcon />}
     placeholder="E-mail"
     value=""
-    required={true}
+    required
     onChange={console.log}
   />
 );
@@ -47,7 +47,7 @@ export const category = (): JSX.Element => (
     icon={<CategoryIcon />}
     placeholder="Kategorie"
     value=""
-    required={true}
+    required
     onChange={console.log}
   />
 );
@@ -57,7 +57,7 @@ export const Location = (): JSX.Element => (
     icon={<LocationIcon />}
     placeholder="Ort"
     value=""
-    required={true}
+    required
     onChange={console.log}
   />
 );
@@ -67,7 +67,7 @@ export const Search = (): JSX.Element => (
     icon={<SearchIcon />}
     placeholder="Ort"
     value=""
-    required={true}
+    required
     onChange={console.log}
   />
 );
