@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Button from './Button';
 
 export default {
@@ -7,5 +6,8 @@ export default {
   component: Button,
 };
 
-export const Login = (): JSX.Element => <Button>Login</Button>;
-export const Register = (): JSX.Element => <Button>Register</Button>;
+export const LoginButton = (): JSX.Element => <Button>Login</Button>;
+
+export const RegisterButton = (): JSX.Element => <Button>Register</Button>;
+
+export const ResetButton = (): JSX.Element => <Button>Reset</Button>;
