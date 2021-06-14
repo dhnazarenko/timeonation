@@ -65,7 +65,7 @@ export const Location = (): JSX.Element => (
 export const Search = (): JSX.Element => (
   <LabeledInput
     icon={<SearchIcon />}
-    placeholder="Ort"
+    placeholder="Suche"
     value=""
     required
     onChange={console.log}
