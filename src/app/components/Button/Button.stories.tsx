@@ -9,3 +9,5 @@ export default {
 export const LoginButton = (): JSX.Element => <Button>Login</Button>;
 
 export const RegisterButton = (): JSX.Element => <Button>Register</Button>;
+
+export const ResetButton = (): JSX.Element => <Button>Reset</Button>;
