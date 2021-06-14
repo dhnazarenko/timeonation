@@ -1,9 +1,12 @@
 .button {
-  color: #000;
-  background: linear-gradient(180deg, #ffbb3b, #ffa90a);
-  font-size: 0.8em;
-  padding: 0.8em 2em;
+  color: var(--text-color);
+  background: var(--secondary-color);
+  font-size: 1.1em;
+  padding: 1em 1.5em;
   border: none;
-  border-radius: 0.4em;
+  border-radius: 1.9em;
   text-transform: uppercase;
+  width: 100%;
+  font-weight: bold;
+  font-family: var(--font-family);
 }
