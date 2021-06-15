@@ -21,30 +21,24 @@ function Login(): JSX.Element {
       </header>
       <main>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <p className={styles.form__headline}>
-            Melde dich mit deinen Daten an
-          </p>
-          <div>
-            <LabeledInput
-              icon={<UserIcon />}
-              type="text"
-              placeholder="Benutzername"
-              value={username}
-              required
-              onChange={setUsername}
-            />
-          </div>
-          <div>
-            <LabeledInput
-              icon={<PasswordIcon />}
-              type="password"
-              placeholder="Passwort"
-              value={password}
-              required
-              onChange={setPassword}
-            />
-          </div>
-          <div className={styles.form__button}>
+          <p className={styles.form__intro}>Melde dich mit deinen Daten an</p>
+          <LabeledInput
+            icon={<UserIcon />}
+            type="text"
+            placeholder="Benutzername"
+            value={username}
+            required
+            onChange={setUsername}
+          />
+          <LabeledInput
+            icon={<PasswordIcon />}
+            type="password"
+            placeholder="Passwort"
+            value={password}
+            required
+            onChange={setPassword}
+          />
+          <div className={styles.form__button_container}>
             <Button>Anmelden</Button>
           </div>
         </form>
