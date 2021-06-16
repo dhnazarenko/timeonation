@@ -5,6 +5,8 @@
   align-items: center;
   grid-template-rows: auto;
   row-gap: 1em;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .container::-webkit-scrollbar {
