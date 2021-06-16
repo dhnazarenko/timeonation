@@ -2,4 +2,7 @@
   color: #fff;
   background: none;
   border: none;
+  position: absolute;
+  top: 2em;
+  left: 1.5em;
 }
