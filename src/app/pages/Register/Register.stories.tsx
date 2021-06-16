@@ -9,4 +9,4 @@ export default {
   },
 } as Meta;
 
-export const Registration = (): JSX.Element => <Register />;
+export const Default = (): JSX.Element => <Register />;
