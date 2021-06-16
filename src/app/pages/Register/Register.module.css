@@ -1,0 +1,35 @@
+.container {
+  height: 100vh;
+  padding: 1.5em;
+  display: grid;
+  align-items: center;
+  grid-template-rows: auto;
+  row-gap: 1em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.main__headline {
+  margin: 0;
+  padding-bottom: 2.2em;
+  font-size: 1.7em;
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  row-gap: 1.2em;
+}
+
+.form__button_container {
+  padding-top: 1em;
+}
+
+.footer__link {
+  margin: 0;
+  text-align: center;
+}
