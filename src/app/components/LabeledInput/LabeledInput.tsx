@@ -19,17 +19,19 @@ function LabeledInput({
   onChange,
 }: LabeledInputProps): JSX.Element {
   return (
-    <label className={styles.container}>
-      <span className={styles.container__icon}>{icon}</span>
-      <input
-        className={styles.container__input}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        required={required}
-        onChange={(event) => onChange(event.target.value)}
-      />
-    </label>
+    <div>
+      <label className={styles.container}>
+        <span className={styles.container__icon}>{icon}</span>
+        <input
+          className={styles.container__input}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          required={required}
+          onChange={(event) => onChange(event.target.value)}
+        />
+      </label>
+    </div>
   );
 }
 

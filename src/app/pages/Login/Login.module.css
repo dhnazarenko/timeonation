@@ -1,0 +1,38 @@
+.container {
+  height: 100vh;
+  text-align: center;
+  padding: 1.5em;
+  display: grid;
+  align-items: center;
+  grid-template-rows: auto;
+  justify-content: center;
+  row-gap: 1em;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.header__headline {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+.form {
+  display: grid;
+  row-gap: 1.2em;
+}
+
+.form__headline {
+  margin: 0;
+  font-weight: 500;
+  padding-top: 1em;
+}
+
+.form__button_container {
+  padding-top: 1em;
+}
+
+.footer__link {
+  margin: 0;
+}
