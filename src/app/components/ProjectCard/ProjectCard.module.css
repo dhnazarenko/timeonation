@@ -11,8 +11,6 @@
   height: 12em;
   border-top-left-radius: 2.5em;
   border-top-right-radius: 2.5em;
-  background-size: cover;
-  background-position: center;
   object-fit: cover;
 }
 
