@@ -1,12 +1,12 @@
 import React from 'react';
-import Register from './Register';
+import ForgotPassword from './ForgotPassword';
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Page/Register',
+  title: 'Page/ForgotPassword',
   parameters: {
     layout: 'fullscreen',
   },
 } as Meta;
 
-export const Default = (): JSX.Element => <Register />;
+export const Default = (): JSX.Element => <ForgotPassword />;
