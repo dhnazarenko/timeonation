@@ -17,7 +17,7 @@
 .information {
   padding: 1em 1em 2em;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 4em;
   grid-template-rows: 1fr auto;
 }
 
@@ -38,4 +38,6 @@
 
 .company_logo {
   width: 4em;
+  height: 4em;
+  object-fit: cover;
 }
