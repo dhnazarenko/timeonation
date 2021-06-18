@@ -11,10 +11,9 @@
     "serve": "vite preview",
     "prepare": "husky install",
     "test": "tsc && prettier --check . && eslint . && stylelint \"**/*.css\" && npm run jest",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s src/app/assets",
     "start": "node dist/server.js",
-    "jest": "jest",
-    "build-storybook": "build-storybook"
+    "jest": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
