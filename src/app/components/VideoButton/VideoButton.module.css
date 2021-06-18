@@ -1,0 +1,25 @@
+.button {
+  color: var(--video-button-color);
+  background: var(--video-button-background-color);
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 1.5em;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: var(--font-family);
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.button--primary {
+  background: var(--primary-button-color);
+}
+
+.button--secondary {
+  background: var(--secondary-button-color);
+}
