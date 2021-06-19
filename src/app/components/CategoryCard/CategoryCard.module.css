@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  padding: 2.3em 2em 1em 0.7em;
+  border-radius: 1.2em;
+  height: 7em;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.2);
+}
+
+.container__title {
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 400;
+  width: 5em;
+}
