@@ -1,0 +1,11 @@
+.navigationLink {
+  height: auto;
+  width: 2.3em;
+  cursor: pointer;
+  transition: ease-in-out 300ms;
+}
+
+.navigationLink--active {
+  color: var(--secondary-color);
+  transition: ease-in-out 300ms;
+}
