@@ -16,5 +16,5 @@ export const Search = (): JSX.Element => (
   <NavigationLink active={false} icon={<NavSearchIcon />} link="search" />
 );
 export const UserProfile = (): JSX.Element => (
-  <NavigationLink active={false} icon={<NavUserIcon />} link="#" />
+  <NavigationLink active={false} icon={<NavUserIcon />} link="profile" />
 );
