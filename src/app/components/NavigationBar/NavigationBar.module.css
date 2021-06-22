@@ -1,0 +1,9 @@
+.navigationBar {
+  background-color: var(--tertiary-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.4em 0 1.6em;
+  border-top-left-radius: 1.2em;
+  border-top-right-radius: 1.2em;
+}
