@@ -22,7 +22,6 @@ export default function NavBar(): JSX.Element {
         icon={<NavSearchIcon />}
         link="/search"
       />
-
       <NavigationLink
         active={activePath === '/profile'}
         icon={<NavUserIcon />}
