@@ -6,15 +6,23 @@ import UserIcon from '../../components/Icons/UserIcon';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import BackButton from '../../components/BackButton/BackButton';
 import Button from '../../components/Button/Button';
+import { useHistory } from 'react-router-dom';
+import { postUser } from '../../../utils/api';
+import { User } from '../../../types';
 
 function Register(): JSX.Element {
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const user: User = { username, email, password };
+    postUser(user);
+    history.push('/');
   }
 
   return (
