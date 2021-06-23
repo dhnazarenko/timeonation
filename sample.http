@@ -7,11 +7,29 @@ Content-Type: application/json
 
 {
   "image": "#",
-  "email": "muster@muster.de",
-  "password": "Test1234",
-  "username": "Dee"
+  "email": "test@gmail.com",
+  "password": "passwort123",
+  "username": "derallerechte"
 }
 
 ### Request all users
 GET {{baseUrl}}/api/users HTTP/1.1
 Accept: application/json 
+
+### Correct login
+POST {{baseUrl}}/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "derallerechte",
+  "password": "passwort123"
+}
+
+### Incorrect login
+POST {{baseUrl}}/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "nichtderallerechte",
+  "password": "passwort123"
+}
