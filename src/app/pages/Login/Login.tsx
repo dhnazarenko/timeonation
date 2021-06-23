@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { User } from '../../../types';
+import { postLoginUser } from '../../../utils/api';
 import Button from '../../components/Button/Button';
 import PasswordIcon from '../../components/Icons/PasswordIcon';
 import UserIcon from '../../components/Icons/UserIcon';
@@ -6,12 +9,16 @@ import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import styles from './Login.module.css';
 
 function Login(): JSX.Element {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const history = useHistory();
+  const [username, checkUsername] = useState('');
+  const [password, checkPassword] = useState('');
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    alert(`Login with ${username}:${password}`);
+
+    const user: Partial<User> = { username, password };
+    await postLoginUser(user);
+    history.push('/register');
   }
 
   return (
@@ -28,7 +35,7 @@ function Login(): JSX.Element {
             placeholder="Benutzername"
             value={username}
             required
-            onChange={setUsername}
+            onChange={checkUsername}
           />
           <LabeledInput
             icon={<PasswordIcon />}
@@ -36,7 +43,7 @@ function Login(): JSX.Element {
             placeholder="Passwort"
             value={password}
             required
-            onChange={setPassword}
+            onChange={checkPassword}
           />
           <div className={styles.form__button_container}>
             <Button>Anmelden</Button>
