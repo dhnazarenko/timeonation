@@ -35,9 +35,6 @@ app.use(express.static('dist/app'));
 app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'app/index.html'));
 });
-app.get('/', (_req, res) => {
-  res.send('Hello World!');
-});
 
 connectDatabase(process.env.MONGODB_URL).then(() => {
   console.log('Database connected');
