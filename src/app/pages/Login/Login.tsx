@@ -52,7 +52,7 @@ function Login(): JSX.Element {
       </main>
       <footer>
         <p className={styles.footer__link}>
-          Du hast keinen Account? <a href="#">Erstellen</a>
+          Du hast keinen Account? <a href="/register">Erstellen</a>
         </p>
       </footer>
     </div>
