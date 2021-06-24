@@ -22,6 +22,11 @@ router.post('/users/login', async (req, res, next) => {
       return;
     }
 
+    res.setHeader(
+      'Set-Cookie',
+      `userId=${user._id};path=/;Max-Age=${365 * 24 * 60 * 60}`
+    );
+
     res.status(200).json(user);
   } catch (error) {
     next(error);
