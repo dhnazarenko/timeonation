@@ -20,7 +20,7 @@ function Login(): JSX.Element {
     try {
       const user: Partial<User> = { username, password };
       await postLoginUser(user);
-      history.push('/register');
+      history.push('/main');
     } catch (error) {
       setErrorMessage(error.toString());
     }
