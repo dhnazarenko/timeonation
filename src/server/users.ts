@@ -5,14 +5,14 @@ export const readUsers = async (): Promise<User[]> => {
   return await getUsersCollection().find().toArray();
 };
 
-export const readUser = async (email: string): Promise<User | undefined> => {
-  const user = await getUsersCollection().findOne({ email });
+export const readUser = async (user: Partial<User>): Promise<User | null> => {
+  const result = await getUsersCollection().findOne(user);
   if (!user) {
     throw new Error('There is no user with that email adress');
   }
-  return user;
+  return result;
 };
 
 export const saveUser = async (newUser: User): Promise<void> => {
-  await getUsersCollection().insertOne({ ...newUser });
+  await getUsersCollection().insertOne(newUser);
 };

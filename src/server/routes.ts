@@ -1,5 +1,5 @@
 import express from 'express';
-import { readUsers, saveUser } from './users';
+import { readUser, readUsers, saveUser } from './users';
 
 const router = express.Router();
 
@@ -11,6 +11,26 @@ router.post('/users', async (req, res) => {
 router.get('/users', async (_req, res) => {
   const users = await readUsers();
   res.json(users);
+});
+
+router.post('/users/login', async (req, res, next) => {
+  try {
+    const { username, password } = req.body;
+    const user = await readUser({ username, password });
+    if (!user) {
+      res.status(404).send('Kein Benutzerkonto gefunden');
+      return;
+    }
+
+    res.setHeader(
+      'Set-Cookie',
+      `userId=${user._id};path=/;Max-Age=${365 * 24 * 60 * 60}`
+    );
+
+    res.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
 });
 
 export default router;
