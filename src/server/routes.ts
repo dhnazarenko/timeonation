@@ -18,7 +18,7 @@ router.post('/users/login', async (req, res, next) => {
     const { username, password } = req.body;
     const user = await readUser({ username, password });
     if (!user) {
-      res.status(404).send('User not found');
+      res.status(404).send('Kein Benutzerkonto gefunden');
       return;
     }
 

@@ -54,7 +54,7 @@ function Login(): JSX.Element {
             <Button>Anmelden</Button>
           </div>
 
-          {errorMessage && <div>Error: {errorMessage}</div>}
+          {errorMessage && <div>{errorMessage}</div>}
         </form>
       </main>
       <footer>
