@@ -13,9 +13,9 @@ export default function NavBar(): JSX.Element {
   return (
     <div className={styles.navigationBar}>
       <NavigationLink
-        active={activePath === '/home'}
+        active={activePath === '/main'}
         icon={<HomeIcon />}
-        link="/home"
+        link="/main"
       />
       <NavigationLink
         active={activePath === '/search'}
