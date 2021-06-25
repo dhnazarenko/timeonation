@@ -12,5 +12,5 @@
   margin: 0;
   font-size: 1.3em;
   font-weight: 400;
-  width: 5em;
+  min-width: 5em;
 }
