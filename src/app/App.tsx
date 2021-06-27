@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, RouteProps } from 'react-router-dom';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
+import Search from './pages/Search/Search';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -13,6 +14,7 @@ const routes: CustomRouteProps[] = [
   { path: '/', Component: Login, exact: true },
   { path: '/register', Component: Register },
   { path: '/main', Component: Main },
+  { path: '/search', Component: Search },
 ];
 
 function App(): JSX.Element {
