@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, RouteProps } from 'react-router-dom';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
-import styles from './App.module.css';
+import Main from './pages/Main/Main';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -12,21 +12,20 @@ type CustomRouteProps = RouteProps & {
 const routes: CustomRouteProps[] = [
   { path: '/', Component: Login, exact: true },
   { path: '/register', Component: Register },
+  { path: '/main', Component: Main },
 ];
 
 function App(): JSX.Element {
   return (
-    <div className={styles.App}>
-      <BrowserRouter>
-        <Switch>
-          {routes.map(({ Component, ...routeProps }) => (
-            <Route key={routeProps.path} {...routeProps}>
-              <Component />
-            </Route>
-          ))}
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        {routes.map(({ Component, ...routeProps }) => (
+          <Route key={routeProps.path} {...routeProps}>
+            <Component />
+          </Route>
+        ))}
+      </Switch>
+    </BrowserRouter>
   );
 }
 
