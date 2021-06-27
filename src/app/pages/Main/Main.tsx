@@ -16,7 +16,7 @@ function Main(): JSX.Element {
       <div className={styles.avatar}>
         <Avatar imageSrc="./daniel.jpg" link="#" />
       </div>
-      <div className={styles.card}>
+      <article className={styles.card}>
         <ProjectCard
           projectImage="/weidensee.jpg"
           projectTitle="Tiere auf Lebenshof Gut Weidensee benötigen dringend Hilfe!"
@@ -44,14 +44,14 @@ function Main(): JSX.Element {
           videoViews={240}
           openAmount={66.051}
         />
-      </div>
+      </article>
       <h2 className={styles.headline}>Kategorie</h2>
-      <div className={styles.card}>
+      <article className={styles.card}>
         <CategoryCard categoryTitle="Corona Nothilfe" />
         <CategoryCard categoryTitle="Kinder und Jugend" />
         <CategoryCard categoryTitle="Klimaschutz" />
         <CategoryCard categoryTitle="Tiere" />
-      </div>
+      </article>
       <NavigationBar />
     </div>
   );
