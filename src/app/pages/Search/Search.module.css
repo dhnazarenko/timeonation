@@ -1,0 +1,30 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 3em;
+  row-gap: 2em;
+}
+
+.headline {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+  padding-left: 1.5rem;
+}
+
+.search {
+  display: grid;
+  row-gap: 1.2em;
+  padding: 0 1.5em;
+}
+
+.card {
+  display: grid;
+  row-gap: 1.2em;
+  background-color: #fff;
+  padding: 2em 1.5em 7em;
+  border-top-left-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+}
