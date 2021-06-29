@@ -18,7 +18,7 @@ async function fetchBetterPlaceApi<T>(path: string, query = ''): Promise<T> {
     const errorResult: ErrorResult = await response.json();
     throw {
       message: errorResult.status_message,
-      theMovieDBCode: errorResult.status_code,
+      betterPlaceDBCode: errorResult.status_code,
       status: response.status,
     };
   }
