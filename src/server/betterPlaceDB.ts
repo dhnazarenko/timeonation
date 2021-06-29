@@ -34,6 +34,11 @@ type ProjectResult = {
   description: string;
   open_amount_in_cents: number;
   progress_percentage: number;
+  carrier: {
+    picture: {
+      links: { rel: string; href: string }[];
+    };
+  };
   profile_picture: {
     links: { rel: string; href: string }[];
   };
@@ -52,6 +57,10 @@ export async function getProjectById(id: string): Promise<Project> {
     description: projectResult.description,
     open_amount_in_cents: projectResult.open_amount_in_cents,
     progress_percentage: projectResult.progress_percentage,
+    carrier:
+      projectResult.carrier.picture.links.find(
+        (link) => link.rel === 'fill_100x100'
+      )?.href || '',
     profile_picture:
       projectResult.profile_picture.links.find(
         (link) => link.rel === 'original'
