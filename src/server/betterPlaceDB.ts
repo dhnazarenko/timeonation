@@ -34,6 +34,9 @@ type ProjectResult = {
   description: string;
   open_amount_in_cents: number;
   progress_percentage: number;
+  profile_picture: {
+    links: { rel: string; href: string }[];
+  };
 };
 
 export async function getProjectById(id: string): Promise<Project> {
@@ -43,13 +46,16 @@ export async function getProjectById(id: string): Promise<Project> {
 
   const project: Project = {
     id: projectResult.id,
-
     city: projectResult.city,
     country: projectResult.country,
     title: projectResult.title,
     description: projectResult.description,
     open_amount_in_cents: projectResult.open_amount_in_cents,
     progress_percentage: projectResult.progress_percentage,
+    profile_picture:
+      projectResult.profile_picture.links.find(
+        (link) => link.rel === 'original'
+      )?.href || '',
   };
   return project;
 }

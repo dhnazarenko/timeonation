@@ -15,4 +15,5 @@ export type Project = {
   description: string;
   open_amount_in_cents: number;
   progress_percentage: number;
+  profile_picture: string;
 };
