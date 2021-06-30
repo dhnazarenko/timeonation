@@ -6,3 +6,16 @@ export type User = {
   password: string;
   username: string;
 };
+
+export type Project = {
+  id: number;
+  city: null | string;
+  country: null | string;
+  title: string;
+  description: string;
+  open_amount_in_cents: number;
+  progress_percentage: number;
+  profile_picture: string;
+  carrier: string;
+  links: string;
+};

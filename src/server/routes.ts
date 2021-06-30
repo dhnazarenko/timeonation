@@ -1,4 +1,5 @@
 import express from 'express';
+import { getProjectById } from './betterPlaceDB';
 import { readUser, readUsers, saveUser } from './users';
 
 const router = express.Router();
@@ -28,6 +29,16 @@ router.post('/users/login', async (req, res, next) => {
     );
 
     res.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get('/projects/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const project = await getProjectById(id);
+    res.status(200).json(project);
   } catch (error) {
     next(error);
   }
