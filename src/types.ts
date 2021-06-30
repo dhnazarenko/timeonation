@@ -19,3 +19,13 @@ export type Project = {
   carrier: string;
   links: string;
 };
+
+export type Projects = {
+  id: number;
+  city: null | string;
+  country: null | string;
+  title: string;
+  open_amount_in_cents: number;
+  profile_picture: string;
+  carrier: string;
+}[];
