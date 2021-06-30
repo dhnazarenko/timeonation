@@ -17,4 +17,5 @@ export type Project = {
   progress_percentage: number;
   profile_picture: string;
   carrier: string;
+  links: string;
 };

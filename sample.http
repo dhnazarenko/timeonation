@@ -1,7 +1,7 @@
 @port = {{$dotenv PORT}}
 @baseUrl = http://localhost:{{port}}
 
-### Bitte helft uns, damit wir helfen können! Berliner Obdachlosenhilfe e.V.
+### Project: Bitte helft uns, damit wir helfen können! Berliner Obdachlosenhilfe e.V.
 GET {{baseUrl}}/api/projects/14049
 
 ### Add a new user

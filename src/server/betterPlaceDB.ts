@@ -42,6 +42,7 @@ type ProjectResult = {
   profile_picture: {
     links: { rel: string; href: string }[];
   };
+  links: { rel: string; href: string }[];
 };
 
 export async function getProjectById(id: string): Promise<Project> {
@@ -65,6 +66,8 @@ export async function getProjectById(id: string): Promise<Project> {
       projectResult.profile_picture.links.find(
         (link) => link.rel === 'original'
       )?.href || '',
+    links:
+      projectResult.links.find((link) => link.rel === 'categories')?.href || '',
   };
   return project;
 }
