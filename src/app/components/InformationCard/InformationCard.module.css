@@ -2,7 +2,7 @@
   background-color: var(--secondary-color);
   display: grid;
   gap: 1.2em;
-  padding: 1em;
+  padding: 0.8em;
   border-radius: 1.3em;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.3);
 }
@@ -21,7 +21,7 @@
   flex-direction: column;
   font-weight: 300;
   border-right: 1px solid var(--text-color);
-  padding: 0.3em 0.8em;
+  padding: 0.3em 0.7em;
 }
 
 .details__legend:last-child {
