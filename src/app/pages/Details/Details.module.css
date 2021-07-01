@@ -1,0 +1,39 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+}
+
+.image {
+  width: 100%;
+  height: 15em;
+  object-fit: cover;
+}
+
+.main {
+  position: absolute;
+  top: 12.5em;
+  padding: 1.5em;
+  border-top-left-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+  background-color: var(--primary-color);
+  display: grid;
+  gap: 1.5em;
+  max-width: 500px;
+}
+
+.headline {
+  font-size: 1.8em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.text {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 130%;
+}
