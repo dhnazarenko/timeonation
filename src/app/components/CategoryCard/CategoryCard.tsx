@@ -1,14 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './CategoryCard.module.css';
 
-type CategoryCardProps = {
-  categoryTitle: string;
+type InputProps = {
+  categories: Array<string>;
 };
 
-function CategoryCard({ categoryTitle }: CategoryCardProps): JSX.Element {
+function CategoryCard({ categories }: InputProps): JSX.Element {
   return (
-    <div className={styles.container}>
-      <h2 className={styles.container__title}>{categoryTitle}</h2>
+    <div className={styles.test}>
+      {categories.map((category) => (
+        <Link to="#" className={styles.link}>
+          <h2 key={category} className={styles.link__title}>
+            {category}
+          </h2>
+        </Link>
+      ))}
     </div>
   );
 }

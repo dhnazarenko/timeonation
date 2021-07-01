@@ -4,12 +4,60 @@ import Avatar from '../../components/Avatar/Avatar';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import CategoryCard from '../../components/CategoryCard/CategoryCard';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
+import useProjects from '../../hooks/useProjects';
+
+const categoriesArray = [
+  'Klimaschutz',
+  'Tiere',
+  'Kinder und Jugend',
+  'Bildung',
+  'Geflüchtete',
+  'Umwelt',
+  'Frauen',
+  'Gesundheit',
+  'Kultur',
+  'Katastrophenschutz',
+  'Nothilfe Beirut',
+  'Seenotrettung',
+  'Ernährung',
+  'Obdachlosenhilfe',
+  'Menschenrechte',
+  'Senioren',
+  'Entwicklungshilfe',
+  'Sport',
+  'Inklusion',
+  'Integration',
+  'Trinkwasser',
+  'Tchnologie',
+  'Forschung',
+  'Infastruktur',
+  'Nothilfe Syrien',
+  'Hungerhilfe in Afrika',
+  'Politische Bildung',
+  'Nothilfe Jemen',
+  'Religion',
+  'Gesundheit',
+  'Nothilfe Indonesien',
+];
 
 function Main(): JSX.Element {
+  const { projects, isLoading, errorMessage } = useProjects();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (errorMessage) {
+    return <div>Error: {errorMessage}</div>;
+  }
+
+  if (!projects) {
+    return <div>Project not found</div>;
+  }
   return (
     <div className={styles.container}>
       <h1 className={styles.headline}>
-        Beliebteste
+        Aktuelle
         <br />
         Projekte
       </h1>
@@ -17,40 +65,22 @@ function Main(): JSX.Element {
         <Avatar imageSrc="./daniel.jpg" link="#" />
       </div>
       <article className={styles.card}>
-        <ProjectCard
-          projectImage="/weidensee.jpg"
-          projectTitle="Tiere auf Lebenshof Gut Weidensee benötigen dringend Hilfe!"
-          country="Deutschland"
-          city="Mühlhausen"
-          companyLogo="/weidensee-logo.png"
-          videoViews={240}
-          openAmount={66.051}
-        />
-        <ProjectCard
-          projectImage="/weidensee.jpg"
-          projectTitle="Tiere auf Lebenshof Gut Weidensee benötigen dringend Hilfe!"
-          country="Deutschland"
-          city="Mühlhausen"
-          companyLogo="/weidensee-logo.png"
-          videoViews={240}
-          openAmount={66.051}
-        />
-        <ProjectCard
-          projectImage="/weidensee.jpg"
-          projectTitle="Tiere auf Lebenshof Gut Weidensee benötigen dringend Hilfe!"
-          country="Deutschland"
-          city="Mühlhausen"
-          companyLogo="/weidensee-logo.png"
-          videoViews={240}
-          openAmount={66.051}
-        />
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            projectImage={project.profile_picture}
+            projectTitle={project.title}
+            country={project.country}
+            city={project.city}
+            companyLogo={project.carrier}
+            videoViews={240}
+            openAmount={project.open_amount_in_cents}
+          />
+        ))}
       </article>
       <h2 className={styles.headline}>Kategorie</h2>
       <article className={styles.card}>
-        <CategoryCard categoryTitle="Corona Nothilfe" />
-        <CategoryCard categoryTitle="Kinder und Jugend" />
-        <CategoryCard categoryTitle="Klimaschutz" />
-        <CategoryCard categoryTitle="Tiere" />
+        <CategoryCard categories={categoriesArray} />
       </article>
       <NavigationBar />
     </div>

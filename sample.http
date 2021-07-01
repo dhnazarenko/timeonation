@@ -4,6 +4,9 @@
 ### Project: Bitte helft uns, damit wir helfen können! Berliner Obdachlosenhilfe e.V.
 GET {{baseUrl}}/api/projects/14049
 
+### Projects
+GET {{baseUrl}}/api/projects
+
 ### Add a new user
 POST {{baseUrl}}/api/users HTTP/1.1
 Content-Type: application/json
