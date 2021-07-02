@@ -4,6 +4,7 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import Search from './pages/Search/Search';
+import Details from './pages/Details/Details';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -14,6 +15,7 @@ const routes: CustomRouteProps[] = [
   { path: '/', Component: Login, exact: true },
   { path: '/register', Component: Register },
   { path: '/main', Component: Main },
+  { path: '/details/:id', Component: Details },
   { path: '/search', Component: Search },
 ];
 
