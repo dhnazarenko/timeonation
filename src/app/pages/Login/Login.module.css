@@ -1,12 +1,14 @@
 .container {
   height: 100vh;
-  text-align: center;
   padding: 1.5em;
   display: grid;
   align-items: center;
   grid-template-rows: auto;
-  justify-content: center;
+  grid-template-columns: 1fr;
+  text-align: center;
   row-gap: 1em;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .container::-webkit-scrollbar {
@@ -21,6 +23,11 @@
 .form {
   display: grid;
   row-gap: 1.2em;
+  align-content: center;
+}
+
+.form__intro {
+  margin: 0;
 }
 
 .form__headline {

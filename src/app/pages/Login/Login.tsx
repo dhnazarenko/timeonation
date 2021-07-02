@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { User } from '../../../types';
 import { postLoginUser } from '../../../utils/api';
 import Button from '../../components/Button/Button';
+import Logo from '../../components/Icons/Logo';
 import PasswordIcon from '../../components/Icons/PasswordIcon';
 import UserIcon from '../../components/Icons/UserIcon';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
@@ -29,7 +30,7 @@ function Login(): JSX.Element {
   return (
     <div className={styles.container}>
       <header>
-        <h1 className={styles.header__headline}>Willkommen bei Timeonation</h1>
+        <Logo />
       </header>
       <main>
         <form onSubmit={handleSubmit} className={styles.form}>
