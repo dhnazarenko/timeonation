@@ -5,7 +5,7 @@ import styles from './InformationCard.module.css';
 type InformationCardProps = {
   financedPercent: number;
   videoViews: number;
-  openAmount: number;
+  openAmount: number | string;
   buttonIcon: React.SVGProps<SVGSVGElement>;
   buttonText: string;
   buttonVariant?: 'primary' | 'secondary';
