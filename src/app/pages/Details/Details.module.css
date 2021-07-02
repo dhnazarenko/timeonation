@@ -1,6 +1,6 @@
 .container {
-  max-width: 500px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -15,14 +15,16 @@
 
 .main {
   position: absolute;
+  width: 100%;
+  max-width: 500px;
   top: 12.5em;
   padding: 1.5em;
   border-top-left-radius: 2.5em;
   border-top-right-radius: 2.5em;
   background-color: var(--primary-color);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5em;
-  max-width: 500px;
 }
 
 .headline {
@@ -32,6 +34,7 @@
 }
 
 .text {
+  word-wrap: break-word;
   margin: 0;
   font-size: 1.2em;
   font-weight: 400;
