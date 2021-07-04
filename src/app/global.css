@@ -11,17 +11,17 @@
   --font-family: 'Roboto', sans-serif;
 
   /* COLORS */
-  --primary-color: #269396;
-  --secondary-color: #ee9b00;
-  --tertiary-color: #001821;
+  --primary-color: #364958;
+  --secondary-color: #87bba2;
+  --tertiary-color: #031821;
   --text-color: #fff;
   --secondary-text-color: #1f1f1f;
   --hint-color: #989898;
-  --border-color: #ee9b00;
-  --background-color: #269396;
+  --border-color: #87bba2;
+  --background-color: #364958;
   --secondary-background-color: #fff;
-  --primary-button-color: #bb3e03;
-  --secondary-button-color: #52b69a;
+  --primary-button-color: #87bba2;
+  --secondary-button-color: #f86e40;
 
   /* SIZES */
   --font-size: 100%;
