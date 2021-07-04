@@ -8,7 +8,7 @@ type InputProps = {
 
 function CategoryCard({ categories }: InputProps): JSX.Element {
   return (
-    <div className={styles.test}>
+    <div className={styles.container}>
       {categories.map((category) => (
         <Link to="#" className={styles.link}>
           <h2 key={category} className={styles.link__title}>

@@ -67,6 +67,7 @@ function Main(): JSX.Element {
       <article className={styles.card}>
         {projects.map((project) => (
           <ProjectCard
+            id={project.id}
             key={project.id}
             projectImage={project.profile_picture}
             projectTitle={project.title}
@@ -74,7 +75,7 @@ function Main(): JSX.Element {
             city={project.city}
             companyLogo={project.carrier}
             videoViews={240}
-            openAmount={project.open_amount_in_cents}
+            openAmount={(project.open_amount_in_cents / 100).toFixed(2)}
           />
         ))}
       </article>
