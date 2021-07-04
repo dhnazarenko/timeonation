@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import Search from './pages/Search/Search';
 import Details from './pages/Details/Details';
+import Profile from './pages/Profile/Profile';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -17,6 +18,7 @@ const routes: CustomRouteProps[] = [
   { path: '/main', Component: Main },
   { path: '/details/:id', Component: Details },
   { path: '/search', Component: Search },
+  { path: '/profile', Component: Profile },
 ];
 
 function App(): JSX.Element {

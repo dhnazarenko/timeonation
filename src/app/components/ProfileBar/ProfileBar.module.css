@@ -1,0 +1,18 @@
+.container {
+  border-bottom: 1px solid var(--text-color);
+  display: grid;
+  gap: 1em;
+}
+
+.label {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.details {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 400;
+  padding-bottom: 0.5em;
+}
