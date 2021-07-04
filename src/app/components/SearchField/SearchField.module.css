@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+}
+
+.container__icon {
+  position: absolute;
+  color: var(--primary-color);
+  top: -0.7em;
+  left: 0.5em;
+}
+
+.container__input {
+  font-family: var(--font-family);
+  font-size: 1.1em;
+  color: var(--secondary-text-color);
+  padding: 1em 3.5em;
+  border-radius: 1.5em;
+  width: 100%;
+  border: none;
+}
+
+.container__input::placeholder {
+  color: var(--hint-color);
+  font-family: var(--font-family);
+}
+
+.container__input:focus {
+  outline-color: var(--secondary-color);
+}
