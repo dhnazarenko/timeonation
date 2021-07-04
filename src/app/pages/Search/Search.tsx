@@ -3,7 +3,6 @@ import CategoryIcon from '../../components/Icons/CategoryIcon';
 import LocationIcon from '../../components/Icons/LocationIcon';
 import SearchIcon from '../../components/Icons/SearchIcon';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
-import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import SearchField from '../../components/SearchField/SearchField';
 import useProjects from '../../hooks/useProjects';
@@ -61,8 +60,6 @@ function Search(): JSX.Element {
           />
         ))}
       </article>
-
-      <NavigationBar />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Main from './pages/Main/Main';
 import Search from './pages/Search/Search';
 import Details from './pages/Details/Details';
 import Profile from './pages/Profile/Profile';
+import NavigationBar from './components/NavigationBar/NavigationBar';
 
 type CustomRouteProps = RouteProps & {
   Component: () => JSX.Element;
@@ -31,6 +32,9 @@ function App(): JSX.Element {
           </Route>
         ))}
       </Switch>
+      <Route path={['/main', '/search', '/profile']}>
+        <NavigationBar />
+      </Route>
     </BrowserRouter>
   );
 }

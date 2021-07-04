@@ -1,7 +1,6 @@
 import React from 'react';
 import Avatar from '../../components/Avatar/Avatar';
 import Button from '../../components/Button/Button';
-import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import ProfileBar from '../../components/ProfileBar/ProfileBar';
 import styles from './Profile.module.css';
 
@@ -25,7 +24,6 @@ function Main(): JSX.Element {
       <div className={styles.button_container}>
         <Button>Abmelden</Button>
       </div>
-      <NavigationBar />
     </div>
   );
 }
