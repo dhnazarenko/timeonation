@@ -72,7 +72,6 @@ function Main(): JSX.Element {
             projectImage={project.profile_picture}
             projectTitle={project.title}
             country={project.country}
-            city={project.city}
             companyLogo={project.carrier}
             videoViews={240}
             openAmount={(project.open_amount_in_cents / 100).toFixed(2)}

@@ -57,7 +57,7 @@ function VideoButton({
           allowFullScreen
         ></iframe>
 
-        <Button onClick={closeModal}>close</Button>
+        <Button onClick={closeModal}>Schliessen</Button>
       </Modal>
     </>
   );

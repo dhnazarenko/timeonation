@@ -7,7 +7,7 @@ type ProjectCardProps = {
   projectImage: string;
   projectTitle: string;
   country: string | null;
-  city: string | null;
+  city?: string | null;
   companyLogo: string;
   videoViews: number;
   openAmount: number | string;
@@ -36,7 +36,7 @@ function ProjectCard({
             <h2 className={styles.information__title}>{projectTitle}</h2>
             <div className={styles.information__data}>
               <span>
-                <b>{city},</b> {country}
+                <b>{city}</b> {country}
               </span>
               <span>
                 <b>{videoViews} mal</b> angesehen
