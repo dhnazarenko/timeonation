@@ -9,12 +9,7 @@ import SearchField from '../../components/SearchField/SearchField';
 import useProjects from '../../hooks/useProjects';
 import styles from './Search.module.css';
 
-type ProjectSearchProps = {
-  search: string;
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
-};
-
-function Search({ search, setSearch }: ProjectSearchProps): JSX.Element {
+function Search(): JSX.Element {
   const { projects, isLoading, errorMessage } = useProjects();
 
   if (isLoading) {
@@ -48,8 +43,8 @@ function Search({ search, setSearch }: ProjectSearchProps): JSX.Element {
         <SearchField
           icon={<SearchIcon />}
           placeholder="Suche"
-          value={search}
-          onChange={setSearch}
+          value=""
+          onChange={console.log}
         />
       </div>
       <article className={styles.card}>
