@@ -5,9 +5,30 @@ import SearchIcon from '../../components/Icons/SearchIcon';
 import LabeledInput from '../../components/LabeledInput/LabeledInput';
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import SearchField from '../../components/SearchField/SearchField';
+import useProjects from '../../hooks/useProjects';
 import styles from './Search.module.css';
 
-function Search(): JSX.Element {
+type ProjectSearchProps = {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+};
+
+function Search({ search, setSearch }: ProjectSearchProps): JSX.Element {
+  const { projects, isLoading, errorMessage } = useProjects();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (errorMessage) {
+    return <div>Error: {errorMessage}</div>;
+  }
+
+  if (!projects) {
+    return <div>Project not found</div>;
+  }
+
   return (
     <div className={styles.container}>
       <h1 className={styles.headline}>Suche</h1>
@@ -24,32 +45,26 @@ function Search(): JSX.Element {
           value=""
           onChange={console.log}
         />
-        <LabeledInput
+        <SearchField
           icon={<SearchIcon />}
           placeholder="Suche"
-          value=""
-          onChange={console.log}
+          value={search}
+          onChange={setSearch}
         />
       </div>
       <article className={styles.card}>
-        <ProjectCard
-          projectImage="/weidensee.jpg"
-          projectTitle="Tiere auf Lebenshof Gut Weidensee benötigen dringend Hilfe!"
-          country="Deutschland"
-          city="Mühlhausen"
-          companyLogo="/weidensee-logo.png"
-          videoViews={240}
-          openAmount={66.051}
-        />
-        <ProjectCard
-          projectImage="/weidensee.jpg"
-          projectTitle="Tiere auf Lebenshof Gut Weidensee benötigen dringend Hilfe!"
-          country="Deutschland"
-          city="Mühlhausen"
-          companyLogo="/weidensee-logo.png"
-          videoViews={240}
-          openAmount={66.051}
-        />
+        {projects.map((project) => (
+          <ProjectCard
+            id={project.id}
+            key={project.title}
+            projectImage={project.profile_picture}
+            projectTitle={project.title}
+            country={project.country}
+            companyLogo={project.carrier}
+            videoViews={240}
+            openAmount={(project.open_amount_in_cents / 100).toFixed(2)}
+          />
+        ))}
       </article>
 
       <NavigationBar />
