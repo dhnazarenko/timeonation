@@ -3,7 +3,6 @@ import styles from './Main.module.css';
 import Avatar from '../../components/Avatar/Avatar';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import CategoryCard from '../../components/CategoryCard/CategoryCard';
-import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import useProjects from '../../hooks/useProjects';
 
 const categoriesArray = [
@@ -82,7 +81,6 @@ function Main(): JSX.Element {
       <article className={styles.card}>
         <CategoryCard categories={categoriesArray} />
       </article>
-      <NavigationBar />
     </div>
   );
 }
