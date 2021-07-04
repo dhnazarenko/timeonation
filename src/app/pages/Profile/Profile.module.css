@@ -1,0 +1,30 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  row-gap: 1.5em;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 3em 1.5em 7em;
+}
+
+.headline {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.avatar {
+  grid: 2 / 3;
+}
+
+.details {
+  grid-column: 1 / 3;
+  display: grid;
+  gap: 1.8em;
+}
+
+.button_container {
+  grid-column: 1 / 3;
+  padding-top: 1em;
+}
