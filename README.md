@@ -8,7 +8,7 @@ Timeonation is a donation app that lets you do good by simply taking some time, 
 
 [Heroku](https://timeonation.herokuapp.com/)
  
-This app was programmed for mobile view. For a better view in your browser, open the development tolls and switch there to the mobile view. Preferably in the format of an iPhone 6/7/8.
+This app was programmed for mobile view. For a better view in your browser, open the development tools and switch there to the mobile view. Preferably in the format of an iPhone 6/7/8.
 
 ## Installing / Getting started
 
